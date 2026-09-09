@@ -1,4 +1,3 @@
-
 <!doctype html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
@@ -15,51 +14,117 @@
 <!--<![endif]-->
 
 <head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
 
     <meta
         name="description"
-        content="Talha Amin - SEO Specialist, Content Strategist, Digital Marketing & Meta Ads Specialist"
+        content="Aliya Malik - IT Student, Digital Marketing, Amazon Operations & Shopify Development"
     >
 
-    <meta name="author" content="Talha Amin">
+    <meta
+        name="author"
+        content="Aliya Malik"
+    >
 
-    <title>Talha Amin | SEO Specialist & Digital Marketer</title>
+    <title>Aliya Malik | IT Student & Digital Marketing Specialist</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="img/favicon.ico"
+    >
 
     <!-- Themify Icons CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link
+        rel="stylesheet"
+        href="css/themify-icons.css"
+    >
 
     <!-- Elegant Line Icons CSS -->
-    <link rel="stylesheet" href="css/elegant-line-icons.css">
+    <link
+        rel="stylesheet"
+        href="css/elegant-line-icons.css"
+    >
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link
+        rel="stylesheet"
+        href="css/bootstrap.min.css"
+    >
 
     <!-- Slicknav CSS -->
-    <link rel="stylesheet" href="css/slicknav.min.css">
+    <link
+        rel="stylesheet"
+        href="css/slicknav.min.css"
+    >
 
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link
+        rel="stylesheet"
+        href="css/animate.min.css"
+    >
 
     <!-- OWL Carousel CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link
+        rel="stylesheet"
+        href="css/owl.carousel.css"
+    >
 
     <!-- Venobox CSS -->
-    <link rel="stylesheet" href="css/venobox.css">
+    <link
+        rel="stylesheet"
+        href="css/venobox.css"
+    >
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link
+        rel="stylesheet"
+        href="css/main.css"
+    >
 
     <style>
-        /* Only making the hero slightly more compact.
-           Existing UI/design remains unchanged. */
+
+        /*
+        ============================================================
+        EXISTING UI PRESERVED
+        Only portfolio title/button styling added.
+        ============================================================
+        */
+
+        /* HERO — same design, only scaled so the content fits cleanly */
         .hero-section {
             min-height: 620px;
             padding-top: 70px;
             padding-bottom: 70px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-content .heading {
+            font-size: 50px !important;
+            line-height: 1.06 !important;
+            margin-bottom: 22px !important;
+        }
+
+        .hero-content .sub-heading {
+            font-size: 21px !important;
+            line-height: 1.2 !important;
+            margin-bottom: 14px !important;
+        }
+
+        .hero-content .desc {
+            max-width: 690px;
+            font-size: 15px !important;
+            line-height: 1.75 !important;
+            margin-bottom: 28px !important;
         }
 
         .navbar-brand {
@@ -71,63 +136,113 @@
         .navbar-brand:hover {
             text-decoration: none;
         }
-        
 
-/* View Live Hover Effect */
+        /* Portfolio hover: title + button appear on the image */
+        .work-thumb {
+            position: relative;
+            overflow: hidden;
+        }
 
-.work-thumb {
-    position: relative;
-    overflow: hidden;
-}
+        .work-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.52);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
 
-.work-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+        .work-overlay .work-title {
+            display: block;
+            margin: 0;
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.35;
+            font-weight: 700;
+            transform: translateY(15px);
+            transition: all 0.3s ease;
+        }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        .work-overlay .work-view-btn {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #ffffff;
+            color: #111111;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.2;
+            border: 0;
+            border-radius: 4px;
+            text-decoration: none;
+            transform: translateY(15px);
+            transition: all 0.3s ease;
+        }
 
-    background: rgba(0, 0, 0, 0.45);
+        .work-overlay .work-view-btn:hover {
+            background: #f2f2f2;
+            color: #111111;
+            text-decoration: none;
+        }
 
-    opacity: 0;
-    visibility: hidden;
+        .work-box:hover .work-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
 
-    transition: all 0.3s ease;
-}
+        .work-box:hover .work-overlay .work-title,
+        .work-box:hover .work-overlay .work-view-btn {
+            transform: translateY(0);
+        }
 
-.work-overlay span {
-    display: inline-block;
+        /* Remove the old title/button area below each image */
+        .work-info {
+            display: none !important;
+        }
 
-    padding: 12px 25px;
+        .work-box img {
+            width: 100%;
+            display: block;
+        }
 
-    background: #ffffff;
-    color: #111111;
+        @media (max-width: 991px) {
+            .hero-content .heading {
+                font-size: 44px !important;
+            }
+        }
 
-    font-size: 14px;
-    font-weight: 600;
+        @media (max-width: 575px) {
+            .hero-section {
+                min-height: 620px;
+            }
 
-    border-radius: 4px;
+            .hero-content .sub-heading {
+                font-size: 20px !important;
+            }
 
-    transform: translateY(15px);
+            .hero-content .heading {
+                font-size: 40px !important;
+                line-height: 1.08 !important;
+            }
 
-    transition: all 0.3s ease;
-}
-
-.work-box:hover .work-overlay {
-    opacity: 1;
-    visibility: visible;
-}
-
-.work-box:hover .work-overlay span {
-    transform: translateY(0);
-}
-
+            .hero-content .desc {
+                font-size: 15px !important;
+                line-height: 1.7 !important;
+            }
+        }
     </style>
+
 </head>
+
 
 <body
     data-spy="scroll"
@@ -135,25 +250,48 @@
     data-offset="70"
 >
 
+
     <!-- PRELOADER -->
+
     <div class="site-preloader-wrap">
+
         <div class="spinner-wrap">
+
             <div class="spinner"></div>
+
         </div>
+
     </div>
 
+
     <!-- HEADER -->
-    <header id="header" class="header-section">
+
+    <header
+        id="header"
+        class="header-section"
+    >
 
         <div class="container">
 
             <nav class="navbar">
 
-               <a href="#home" class="navbar-brand"> <img src="img/logo.png" alt="Talha Amin"> </a>
+                <a
+                    href="#home"
+                    class="navbar-brand"
+                >
+                    <img
+                        src="img/logo.png"
+                        alt="Aliya Malik"
+                    >
+                </a>
+
 
                 <div class="d-flex menu-wrap">
 
-                    <div id="navmenu" class="mainmenu">
+                    <div
+                        id="navmenu"
+                        class="mainmenu"
+                    >
 
                         <ul class="nav">
 
@@ -170,6 +308,7 @@
                                 </a>
                             </li>
 
+
                             <li>
                                 <a
                                     data-scroll
@@ -179,6 +318,7 @@
                                     About
                                 </a>
                             </li>
+
 
                             <li>
                                 <a
@@ -190,6 +330,7 @@
                                 </a>
                             </li>
 
+
                             <li>
                                 <a
                                     data-scroll
@@ -200,6 +341,7 @@
                                 </a>
                             </li>
 
+
                             <li>
                                 <a
                                     data-scroll
@@ -209,6 +351,7 @@
                                     Experience
                                 </a>
                             </li>
+
 
                             <li>
                                 <a
@@ -231,58 +374,55 @@
         </div>
 
     </header>
+
     <!-- END HEADER -->
 
+<!-- HERO -->
+<section
+    id="home"
+    class="hero-section d-flex align-items-center"
+>
+    <div class="container">
 
-    <!-- HERO -->
-    <section
-        id="home"
-        class="hero-section d-flex align-items-center"
-    >
+        <div class="row hero-wrap">
 
-        <div class="container">
+            <div class="col-lg-7">
 
-            <div class="row hero-wrap ">
+                <div class="hero-content mt-50">
 
-                <div class="col-lg-7">
+                    <h3
+                        class="sub-heading wow fadeInUp"
+                        data-wow-delay="200ms"
+                    >
+                        Hey, I AM Aliya Malik...
+                    </h3>
 
-                    <div class="hero-content mt-50"> ">
+                    <h1
+                        class="heading wow fadeInUp"
+                        data-wow-delay="300ms"
+                    >
+                        IT STUDENT | DIGITAL MARKETING & SHOPIFY
+                    </h1>
 
-                        <h3
-                            class="sub-heading wow fadeInUp "
-                            data-wow-delay="200ms"
-                        >
-                            Hey, I AM Talha Amin...
-                        </h3>
+                    <p
+                        class="desc wow fadeInUp"
+                        data-wow-delay="400ms"
+                    >
+                        Motivated and hardworking IT student with an ADP in IT
+                        Management and currently pursuing BBIS. Skilled in
+                        digital marketing, Amazon operations, Shopify
+                        development, communication, teamwork and problem-solving.
+                    </p>
 
-                        <h1
-                            class="heading wow fadeInUp"
-                            data-wow-delay="300ms"
-                        >
-                            SEO Specialist | Content Strategist
-                        </h1>
-
-                        <p
-                            class="desc wow fadeInUp"
-                            data-wow-delay="400ms"
-                        >
-                            SEO Specialist, Content Strategist, Digital Marketing
-                            and Meta Ads professional with 4+ years of experience
-                            driving measurable organic growth through technical SEO,
-                            on-page and off-page optimization, content strategy and
-                            digital marketing.
-                        </p>
-
-                        <a
-                            href="/img/talha.pdf"
-                            class="default-btn wow fadeInUp"
-                            data-wow-delay="500ms"
-                            download
-                        >
-                            Download CV
-                        </a>
-
-                    </div>
+                    <!-- DOWNLOAD CV BUTTON -->
+                    <a
+                        href="img/aliya.pdf"
+                        class="default-btn wow fadeInUp"
+                        data-wow-delay="500ms"
+                        download
+                    >
+                        Download CV
+                    </a>
 
                 </div>
 
@@ -290,11 +430,15 @@
 
         </div>
 
-    </section>
+    </div>
+</section>
+<!-- END HERO -->
+
     <!-- END HERO -->
 
 
     <!-- ABOUT -->
+
     <section
         id="about"
         class="about-section bd-bottom padding"
@@ -304,6 +448,7 @@
 
             <div class="row about-wrap d-flex align-items-center">
 
+
                 <div class="col-lg-5 sm-padding">
 
                     <div
@@ -312,8 +457,8 @@
                     >
 
                         <img
-                            src="img/about.jpg"
-                            alt="Talha Amin"
+                            src="img/aliya.png"
+                            alt="Aliya Malik"
                         >
 
                     </div>
@@ -331,7 +476,7 @@
                                 class="wow fadeInUp"
                                 data-wow-delay="100ms"
                             >
-                                I'm an SEO Specialist
+                                I'm an IT Student
                             </span>
 
                             <br>
@@ -340,7 +485,7 @@
                                 class="wow fadeInUp"
                                 data-wow-delay="300ms"
                             >
-                                & Content Strategist.
+                                & Digital Marketing Specialist.
                             </span>
 
                         </h2>
@@ -350,10 +495,11 @@
                             class="wow fadeInUp"
                             data-wow-delay="500ms"
                         >
-                            I'm Talha Amin, an SEO & Digital Marketing Specialist
-                            with 4+ years of experience driving measurable organic
-                            growth through technical SEO, on-page/off-page
-                            optimization, content strategy and Meta Ads.
+                            I'm Aliya Malik, a motivated and hardworking IT
+                            student with an ADP in IT Management and currently
+                            pursuing BBIS. I have hands-on experience in
+                            digital marketing, Amazon operations and Shopify
+                            development.
                         </p>
 
 
@@ -361,10 +507,10 @@
                             class="wow fadeInUp"
                             data-wow-delay="600ms"
                         >
-                            I have worked across healthcare, e-commerce and
-                            international B2B markets, with expertise in keyword
-                            research, SERP analysis, competitor auditing, backlink
-                            strategy, content creation and lead generation.
+                            My experience includes developing and managing
+                            Shopify stores, product uploads, theme
+                            customization, store optimization, marketing
+                            content and audience trend analysis.
                         </p>
 
 
@@ -372,160 +518,205 @@
                             class="wow fadeInUp"
                             data-wow-delay="700ms"
                         >
-                            My multilingual content experience includes English,
-                            Pashto, Urdu and Dari, allowing me to create culturally
-                            relevant content for regional and global audiences.
+                            I have also worked with Amazon product listings,
+                            product optimization, customer handling, product
+                            research and market analysis to identify profitable
+                            opportunities and maintain competitive pricing.
                         </p>
+
 
                     </div>
 
 
                     <!-- SKILLS -->
-               <ul
-    class="skill-items wow fadeInUp"
-    data-wow-delay="800ms"
->
 
-    <li class="skill-item">
+                    <ul
+                        class="skill-items wow fadeInUp"
+                        data-wow-delay="800ms"
+                    >
 
-        <h5>
-            On-Page SEO
-        </h5>
+                        <li class="skill-item">
 
-        <div class="progress">
+                            <h5>
+                                Social Media Engagement
+                            </h5>
 
-            <div
-                class="progress-bar wow slideInLeft"
-                data-wow-duration="2000ms"
-                role="progressbar"
-                style="width: 95%;"
-            >
-                <span>95%</span>
-            </div>
+                            <div class="progress">
 
-        </div>
+                                <div
+                                    class="progress-bar wow slideInLeft"
+                                    data-wow-duration="2000ms"
+                                    role="progressbar"
+                                    style="width: 90%;"
+                                >
+                                    <span>90%</span>
+                                </div>
 
-    </li>
+                            </div>
 
-
-    <li class="skill-item">
-
-        <h5>
-            Off-Page SEO
-        </h5>
-
-        <div class="progress">
-
-            <div
-                class="progress-bar wow slideInLeft"
-                data-wow-duration="2000ms"
-                role="progressbar"
-                style="width: 90%;"
-            >
-                <span>90%</span>
-            </div>
-
-        </div>
-
-    </li>
+                        </li>
 
 
-    <li class="skill-item">
+                        <li class="skill-item">
 
-        <h5>
-            Technical SEO
-        </h5>
+                            <h5>
+                                Market Research & Analysis
+                            </h5>
 
-        <div class="progress">
+                            <div class="progress">
 
-            <div
-                class="progress-bar wow slideInLeft"
-                data-wow-duration="2000ms"
-                role="progressbar"
-                style="width: 90%;"
-            >
-                <span>90%</span>
-            </div>
+                                <div
+                                    class="progress-bar wow slideInLeft"
+                                    data-wow-duration="2000ms"
+                                    role="progressbar"
+                                    style="width: 90%;"
+                                >
+                                    <span>90%</span>
+                                </div>
 
-        </div>
+                            </div>
 
-    </li>
-
-
-    <li class="skill-item">
-
-        <h5>
-            Content Strategy
-        </h5>
-
-        <div class="progress">
-
-            <div
-                class="progress-bar wow slideInLeft"
-                data-wow-duration="2000ms"
-                role="progressbar"
-                style="width: 95%;"
-            >
-                <span>95%</span>
-            </div>
-
-        </div>
-
-    </li>
+                        </li>
 
 
-    <!-- Social Media Marketing -->
-    <li class="skill-item">
+                        <li class="skill-item">
 
-        <h5>
-            Social Media Marketing
-        </h5>
+                            <h5>
+                                Problem-Solving
+                            </h5>
 
-        <div class="progress">
+                            <div class="progress">
 
-            <div
-                class="progress-bar wow slideInLeft"
-                data-wow-duration="2000ms"
-                role="progressbar"
-                style="width: 90%;"
-            >
-                <span>90%</span>
-            </div>
+                                <div
+                                    class="progress-bar wow slideInLeft"
+                                    data-wow-duration="2000ms"
+                                    role="progressbar"
+                                    style="width: 90%;"
+                                >
+                                    <span>90%</span>
+                                </div>
 
-        </div>
+                            </div>
 
-    </li>
+                        </li>
 
 
-    <!-- Graphic Design -->
-    <li class="skill-item">
+                        <li class="skill-item">
 
-        <h5>
-            Graphic Design
-        </h5>
+                            <h5>
+                                Time Management
+                            </h5>
 
-        <div class="progress">
+                            <div class="progress">
 
-            <div
-                class="progress-bar wow slideInLeft"
-                data-wow-duration="2000ms"
-                role="progressbar"
-                style="width: 85%;"
-            >
-                <span>85%</span>
-            </div>
+                                <div
+                                    class="progress-bar wow slideInLeft"
+                                    data-wow-duration="2000ms"
+                                    role="progressbar"
+                                    style="width: 90%;"
+                                >
+                                    <span>90%</span>
+                                </div>
 
-        </div>
+                            </div>
 
-    </li>
+                        </li>
 
-</ul>
+
+                        <li class="skill-item">
+
+                            <h5>
+                                Presentation Skills
+                            </h5>
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar wow slideInLeft"
+                                    data-wow-duration="2000ms"
+                                    role="progressbar"
+                                    style="width: 85%;"
+                                >
+                                    <span>85%</span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+                        <li class="skill-item">
+
+                            <h5>
+                                AI Agent
+                            </h5>
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar wow slideInLeft"
+                                    data-wow-duration="2000ms"
+                                    role="progressbar"
+                                    style="width: 85%;"
+                                >
+                                    <span>85%</span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+                        <li class="skill-item">
+
+                            <h5>
+                                Team Collaboration
+                            </h5>
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar wow slideInLeft"
+                                    data-wow-duration="2000ms"
+                                    role="progressbar"
+                                    style="width: 90%;"
+                                >
+                                    <span>90%</span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+                        <li class="skill-item">
+
+                            <h5>
+                                Fast Typing & MS Office
+                            </h5>
+
+                            <div class="progress">
+
+                                <div
+                                    class="progress-bar wow slideInLeft"
+                                    data-wow-duration="2000ms"
+                                    role="progressbar"
+                                    style="width: 90%;"
+                                >
+                                    <span>90%</span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                    </ul>
 
 
                     <div class="cv-btn">
 
                         <a
-                            href="mailto:talhanoor82@gmail.com"
+                            href="mailto:malikaliya079@gmail.com"
                             class="default-btn wow fadeInUp"
                             data-wow-delay="900ms"
                         >
@@ -541,10 +732,12 @@
         </div>
 
     </section>
+
     <!-- END ABOUT -->
 
 
     <!-- SERVICES -->
+
     <section
         id="services"
         class="service-section bg-grey bd-bottom padding"
@@ -564,7 +757,8 @@
             <div class="service-wrap row">
 
 
-                <!-- SEO -->
+                <!-- DIGITAL MARKETING -->
+
                 <div
                     class="col-lg-3 col-sm-6 sm-padding wow fadeInUp"
                     data-wow-delay="100ms"
@@ -572,16 +766,18 @@
 
                     <div class="service-item text-center">
 
-                        <i class="icon-tools"></i>
+                        <i class="icon-camera"></i>
 
                         <h3>
-                            <span>SEO Strategy</span>
+                            <span>
+                                Digital Marketing
+                            </span>
                         </h3>
 
                         <p>
-                            Technical SEO, on-page SEO, off-page SEO,
-                            keyword research, SERP analysis and backlink strategy
-                            to improve organic visibility.
+                            Digital marketing content, audience research,
+                            social media engagement and marketing support
+                            focused on improving brand reach and interaction.
                         </p>
 
                     </div>
@@ -589,7 +785,8 @@
                 </div>
 
 
-                <!-- CONTENT -->
+                <!-- SHOPIFY -->
+
                 <div
                     class="col-lg-3 col-sm-6 sm-padding wow fadeInUp"
                     data-wow-delay="300ms"
@@ -600,13 +797,15 @@
                         <i class="icon-laptop"></i>
 
                         <h3>
-                            <span>Content Strategy</span>
+                            <span>
+                                Shopify Development
+                            </span>
                         </h3>
 
                         <p>
-                            SEO blogs, guest posts, copywriting, landing page
-                            content and content strategies aligned with search
-                            intent and business goals.
+                            Shopify store development, product uploads,
+                            theme customization and store optimization
+                            for better customer experience.
                         </p>
 
                     </div>
@@ -614,7 +813,8 @@
                 </div>
 
 
-                <!-- DIGITAL MARKETING -->
+                <!-- AMAZON -->
+
                 <div
                     class="col-lg-3 col-sm-6 sm-padding wow fadeInUp"
                     data-wow-delay="500ms"
@@ -622,16 +822,18 @@
 
                     <div class="service-item text-center">
 
-                        <i class="icon-camera"></i>
+                        <i class="icon-tools"></i>
 
                         <h3>
-                            <span>Digital Marketing</span>
+                            <span>
+                                Amazon Operations
+                            </span>
                         </h3>
 
                         <p>
-                            Digital marketing campaigns, Meta Ads, social media
-                            marketing, lead generation and performance-focused
-                            strategies.
+                            Amazon product listing management, optimization,
+                            customer handling, product research and market
+                            analysis.
                         </p>
 
                     </div>
@@ -639,7 +841,8 @@
                 </div>
 
 
-                <!-- CREATIVE -->
+                <!-- RESEARCH -->
+
                 <div
                     class="col-lg-3 col-sm-6 sm-padding wow fadeInUp"
                     data-wow-delay="700ms"
@@ -647,30 +850,36 @@
 
                     <div class="service-item text-center">
 
-                        <i class="icon-mobile"></i>
+                        <i class="icon-globe"></i>
 
                         <h3>
-                            <span>Creative Content</span>
+                            <span>
+                                Market Research
+                            </span>
                         </h3>
 
                         <p>
-                            Graphic design, photography, visual content creation,
-                            social media content and brand storytelling.
+                            Product and market research to identify profitable
+                            opportunities, analyze trends and maintain
+                            competitive pricing strategies.
                         </p>
 
                     </div>
 
                 </div>
 
+
             </div>
 
         </div>
 
     </section>
+
     <!-- END SERVICES -->
 
 
     <!-- COUNTERS -->
+
     <section class="counter-section padding overlay">
 
         <div class="container">
@@ -688,11 +897,11 @@
                         <i class="icon-trophy"></i>
 
                         <h3 class="counter">
-                            4
+                            5
                         </h3>
 
                         <h4>
-                            Years Experience+
+                            Years Amazon Experience+
                         </h4>
 
                     </div>
@@ -707,14 +916,14 @@
 
                     <div class="counter-item text-center">
 
-                        <i class="icon-documents"></i>
+                        <i class="icon-laptop"></i>
 
                         <h3 class="counter">
-                            40
+                            2
                         </h3>
 
                         <h4>
-                            Keyword Ranking Growth %
+                            Years Shopify & Marketing
                         </h4>
 
                     </div>
@@ -729,14 +938,14 @@
 
                     <div class="counter-item text-center">
 
-                        <i class="icon-happy"></i>
+                        <i class="icon-book-open"></i>
 
                         <h3 class="counter">
-                            60
+                            2
                         </h3>
 
                         <h4>
-                            Organic Traffic Growth %
+                            Academic Qualifications
                         </h4>
 
                     </div>
@@ -754,14 +963,319 @@
                         <i class="icon-globe"></i>
 
                         <h3 class="counter">
-                            4
+                            2
                         </h3>
 
                         <h4>
-                            Content Languages
+                            Languages
                         </h4>
 
                     </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- END COUNTERS -->
+
+
+    <!-- PORTFOLIO -->
+
+    <section
+        id="portfolio"
+        class="work-section bd-bottom padding"
+    >
+
+        <div class="container">
+
+            <div class="section-heading text-center mb-40">
+
+                <h2
+                    class="wow fadeInUp"
+                    data-wow-delay="100ms"
+                >
+                    Work Portfolio
+                </h2>
+
+            </div>
+
+
+            <div class="work-items-wrap">
+
+                <div class="work-titles"></div>
+
+
+                <!-- FILTERS -->
+
+                <ul
+                    class="work-filter mb-30 wow fadeInUp"
+                    data-wow-delay="300ms"
+                >
+
+                    <li
+                        class="active"
+                        data-filter="*"
+                    >
+                        All
+                    </li>
+
+                    <li data-filter=".digital">
+                        Digital Marketing
+                    </li>
+
+                    <li data-filter=".shopify">
+                        Shopify
+                    </li>
+
+                    <li data-filter=".amazon">
+                        Amazon
+                    </li>
+
+                    <li data-filter=".social">
+                        Social Media
+                    </li>
+
+                </ul>
+
+
+                <div
+                    class="row work-items wow fadeInUp"
+                    data-wow-delay="500ms"
+                >
+
+
+                    <!-- 1 -->
+
+                    <div
+                        class="col-md-4 col-sm-6 xs-padding single-item digital"
+                    >
+
+                        <a
+                            href="https://docs.google.com/document/d/1Pjwn_ZVm9E8m_tTTwyr99_orix7jfKDz/edit?usp=drive_link&ouid=116834886911766408754&rtpof=true&sd=true"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="work-box"
+                        >
+
+                            <div class="work-thumb">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+                                    alt="Digital Marketing Portfolio"
+                                >
+
+                                <div class="work-overlay">
+                                    <h4 class="work-title">Digital Marketing Work</h4>
+                                    <span class="work-view-btn">
+                                        View
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        
+
+                    </div>
+
+
+                    <!-- 2 -->
+
+                    <div
+                        class="col-md-4 col-sm-6 xs-padding single-item shopify"
+                    >
+
+                        <a
+                            href="https://docs.google.com/document/d/1S3C26KucMfbgZv5Y70nCsd0n_Li2_N-PeJ324wQJK1g/edit?usp=drive_link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="work-box"
+                        >
+
+                            <div class="work-thumb">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80"
+                                    alt="Shopify Development Work"
+                                >
+
+                                <div class="work-overlay">
+                                    <h4 class="work-title">Shopify Development</h4>
+                                    <span class="work-view-btn">
+                                        View
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        
+
+                    </div>
+
+
+                    <!-- 3 -->
+
+                    <div
+                        class="col-md-4 col-sm-6 xs-padding single-item digital social"
+                    >
+
+                        <a
+                            href="https://careerandremotejobs.blogspot.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="work-box"
+                        >
+
+                            <div class="work-thumb">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                                    alt="Career and Remote Jobs"
+                                >
+
+                                <div class="work-overlay">
+                                    <h4 class="work-title">Career & Remote Jobs</h4>
+                                    <span class="work-view-btn">
+                                        View
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        
+
+                    </div>
+
+
+                    <!-- 4 -->
+
+                    <div
+                        class="col-md-4 col-sm-6 xs-padding single-item amazon digital"
+                    >
+
+                        <a
+                            href="https://drive.google.com/drive/folders/1R--DEYPxwwJG563Uy2-NpZyDIPFbrkCe?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="work-box"
+                        >
+
+                            <div class="work-thumb">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=900&q=80"
+                                    alt="Amazon Operations Portfolio"
+                                >
+
+                                <div class="work-overlay">
+                                    <h4 class="work-title">Amazon Operations</h4>
+                                    <span class="work-view-btn">
+                                        View
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        
+
+                    </div>
+
+
+                    <!-- 5 -->
+
+                    <div
+                        class="col-md-4 col-sm-6 xs-padding single-item amazon"
+                    >
+
+                        <a
+                            href="https://drive.google.com/file/d/1Ez43oIpKm9j4hWz5by-HsphrJfyHgbuI/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="work-box"
+                        >
+
+                            <div class="work-thumb">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
+                                    alt="Amazon Product Work"
+                                >
+
+                                <div class="work-overlay">
+                                    <h4 class="work-title">Amazon Product Work</h4>
+                                    <span class="work-view-btn">
+                                        View
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        
+
+                    </div>
+
+
+                    <!-- 6 -->
+
+                    <div
+                        class="col-md-4 col-sm-6 xs-padding single-item digital social"
+                    >
+
+                        <a
+                            href="https://drive.google.com/file/d/1ViqaqkZ7-WZKxl-esHE2XS7Q68jNUhQl/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="work-box"
+                        >
+
+                            <div class="work-thumb">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=900&q=80"
+                                    alt="Social Media & Marketing Work"
+                                >
+
+                                <div class="work-overlay">
+                                    <h4 class="work-title">Social Media & Marketing</h4>
+                                    <span class="work-view-btn">
+                                        View
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </a>
+
+
+                        
+
+                    </div>
+
 
                 </div>
 
@@ -770,349 +1284,12 @@
         </div>
 
     </section>
-    <!-- END COUNTERS -->
-
-
-   <!-- PORTFOLIO -->
-<section
-    id="portfolio"
-    class="work-section bd-bottom padding"
->
-
-    <div class="container">
-
-        <div class="section-heading text-center mb-40">
-
-            <h2
-                class="wow fadeInUp"
-                data-wow-delay="100ms"
-            >
-                Work Portfolio
-            </h2>
-
-        </div>
-
-        <div class="work-items-wrap">
-
-            <div class="work-titles"></div>
-
-            <!-- FILTERS -->
-            <ul
-                class="work-filter mb-30 wow fadeInUp"
-                data-wow-delay="300ms"
-            >
-
-                <li
-                    class="active"
-                    data-filter="*"
-                >
-                    All
-                </li>
-
-                <li data-filter=".seo">
-                    SEO
-                </li>
-
-                <li data-filter=".content">
-                    Content
-                </li>
-
-                <li data-filter=".marketing">
-                    Marketing
-                </li>
-
-                <li data-filter=".social">
-                    Social Media
-                </li>
-
-            </ul>
-
-
-            <div
-                class="row work-items wow fadeInUp"
-                data-wow-delay="500ms"
-            >
-
-
-                <!-- 1 - Enfield Royal Clinics Pakistan -->
-                <div
-                    class="col-md-4 col-sm-6 xs-padding single-item seo content marketing"
-                >
-
-                    <a
-                        href="https://www.enfieldroyalclinics.com.pk/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work-box"
-                    >
-
-                        <div class="work-thumb">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80"
-                                alt="Enfield Royal Clinics Pakistan"
-                            >
-
-                            <div class="work-overlay">
-                                <span>View Live</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <!-- 2 - Enfield Royal Saudia -->
-                <div
-                    class="col-md-4 col-sm-6 xs-padding single-item seo marketing"
-                >
-
-                    <a
-                        href="https://www.enfieldroyalsaudia.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work-box"
-                    >
-
-                        <div class="work-thumb">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80"
-                                alt="Enfield Royal Saudia"
-                            >
-
-                            <div class="work-overlay">
-                                <span>View Live</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <!-- 3 - Royal Clinic Dubai -->
-                <div
-                    class="col-md-4 col-sm-6 xs-padding single-item seo content"
-                >
-
-                    <a
-                        href="https://www.royalclinicdubai.com/en-ae/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work-box"
-                    >
-
-                        <div class="work-thumb">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=900&q=80"
-                                alt="Royal Clinic Dubai"
-                            >
-
-                            <div class="work-overlay">
-                                <span>View Live</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <!-- 4 - Enfield Royal Clinic International -->
-                <div
-                    class="col-md-4 col-sm-6 xs-padding single-item seo content"
-                >
-
-                    <a
-                        href="https://enfieldroyalclinic.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work-box"
-                    >
-
-                        <div class="work-thumb">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1516841273335-e39b37888115?auto=format&fit=crop&w=900&q=80"
-                                alt="Enfield Royal Clinic International"
-                            >
-
-                            <div class="work-overlay">
-                                <span>View Live</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <!-- 5 - Royal Cosmetic Surgery Pakistan -->
-                <div
-                    class="col-md-4 col-sm-6 xs-padding single-item seo marketing"
-                >
-
-                    <a
-                        href="https://www.royalcosmeticsurgery.com.pk/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work-box"
-                    >
-
-                        <div class="work-thumb">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=80"
-                                alt="Royal Cosmetic Surgery Pakistan"
-                            >
-
-                            <div class="work-overlay">
-                                <span>View Live</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <!-- 6 - Craxy Ninja Official -->
-                <div
-                    class="col-md-4 col-sm-6 xs-padding single-item social content marketing"
-                >
-
-                    <a
-                        href="https://www.instagram.com/craxyninjaofficial/?hl=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work-box"
-                    >
-
-                        <div class="work-thumb">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=900&q=80"
-                                alt="Craxy Ninja Official"
-                            >
-
-                            <div class="work-overlay">
-                                <span>View Live</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <!-- 7 - Media Sniffers -->
-                <div
-                    class="col-md-4 col-sm-6 xs-padding single-item seo content social"
-                >
-
-                    <a
-                        href="https://www.instagram.com/mediasniffers/?hl=en"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="work-box"
-                    >
-
-                        <div class="work-thumb">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=900&q=80"
-                                alt="Media Sniffers"
-                            >
-
-                            <div class="work-overlay">
-                                <span>View Live</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <!-- 8 - Meta Ads and Niche Content SEO -->
-                <div
-                    class="col-md-4 col-sm-6 xs-padding single-item seo marketing"
-                >
-
-                    <a
-                        href="#portfolio"
-                        class="work-box"
-                    >
-
-                        <div class="work-thumb">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
-                                alt="Meta Ads and Niche Content SEO"
-                            >
-
-                            <div class="work-overlay">
-                                <span>View Live</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-                <!-- 9 - Franchise and Business Content Campaign -->
-                <div
-                    class="col-md-4 col-sm-6 xs-padding single-item seo content"
-                >
-
-                    <a
-                        href="#portfolio"
-                        class="work-box"
-                    >
-
-                        <div class="work-thumb">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
-                                alt="Franchise and Business Content Campaign"
-                            >
-
-                            <div class="work-overlay">
-                                <span>View Live</span>
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
 
     <!-- END PORTFOLIO -->
 
 
     <!-- EXPERIENCE -->
+
     <section
         id="reviews"
         class="testimonial-section bg-grey bd-bottom padding"
@@ -1159,29 +1336,31 @@
                     >
 
 
-                        <!-- Enfield -->
+                        <!-- AMAZON -->
+
                         <div class="testi-item">
 
                             <p>
-                                Led end-to-end SEO strategy for Enfield Royal Clinic,
-                                including on-page optimization, technical audits and
-                                keyword research. Wrote and optimized landing pages
-                                and blog content to improve search rankings and
-                                qualified lead generation. Also designed visual
-                                creatives supporting paid and organic campaigns.
+                                Managed Amazon product listings, product
+                                optimization and customer handling to improve
+                                product visibility and sales performance.
+                                Conducted product research and market analysis
+                                to identify profitable opportunities and
+                                maintain competitive pricing strategies.
                             </p>
+
 
                             <div class="testi-thumb">
 
                                 <img
                                     src="img/testi-1.jpg"
-                                    alt="Enfield Royal Clinic"
+                                    alt="Amazon"
                                 >
 
                                 <h3>
-                                    Enfield Royal Clinic
+                                    Amazon
                                     <span>
-                                        Digital Marketing Specialist / SEO Specialist
+                                        Amazon Operations
                                     </span>
                                 </h3>
 
@@ -1190,28 +1369,30 @@
                         </div>
 
 
-                        <!-- Passive Tactics -->
+                        <!-- DIGITAL MARKETING -->
+
                         <div class="testi-item">
 
                             <p>
-                                Produced SEO-optimized blogs, guest posts and niche
-                                content across multiple client websites. Conducted
-                                keyword research and SERP analysis to identify content
-                                gaps and developed affiliate and informational content
-                                targeting low-competition, high-conversion keywords.
+                                Created marketing content and analyzed audience
+                                trends to improve brand reach and customer
+                                interaction. Supported digital marketing
+                                activities with research, content and social
+                                media engagement.
                             </p>
+
 
                             <div class="testi-thumb">
 
                                 <img
                                     src="img/testi-2.jpg"
-                                    alt="Passive Tactics"
+                                    alt="Digital Marketing"
                                 >
 
                                 <h3>
-                                    Passive Tactics
+                                    Digital Marketing
                                     <span>
-                                        Senior SEO Strategist / Content Writer
+                                        Digital Marketing Experience
                                     </span>
                                 </h3>
 
@@ -1220,28 +1401,29 @@
                         </div>
 
 
-                        <!-- KTL -->
+                        <!-- SHOPIFY -->
+
                         <div class="testi-item">
 
                             <p>
-                                Managed multilingual social media content calendars
-                                in English, Pashto and Urdu. Created guest posts and
-                                outreach content supporting off-page SEO and backlink
-                                acquisition for an international communications client.
+                                Developed and managed Shopify stores, including
+                                product uploads, theme customization and store
+                                optimization to improve store presentation and
+                                customer experience.
                             </p>
+
 
                             <div class="testi-thumb">
 
                                 <img
                                     src="img/testi-3.jpg"
-                                    alt="KTL Communication USA"
+                                    alt="Shopify Development"
                                 >
 
                                 <h3>
-                                    KTL Communication USA
+                                    Shopify Development
                                     <span>
-                                        Social Media Manager / Translator /
-                                        Content Contributor
+                                        Shopify Store Development
                                     </span>
                                 </h3>
 
@@ -1250,29 +1432,29 @@
                         </div>
 
 
-                        <!-- Media Sniffers -->
+                        <!-- MARKET RESEARCH -->
+
                         <div class="testi-item">
 
                             <p>
-                                Created SEO-friendly blog content paired with custom
-                                graphics to support digital marketing campaigns.
-                                Conducted keyword research and competitor audits and
-                                produced original photography and visual assets to
-                                strengthen brand identity.
+                                Conducted product research and market analysis
+                                to identify profitable opportunities, analyze
+                                market trends and support competitive pricing
+                                strategies.
                             </p>
+
 
                             <div class="testi-thumb">
 
                                 <img
                                     src="img/testi-1.jpg"
-                                    alt="Media Sniffers"
+                                    alt="Market Research"
                                 >
 
                                 <h3>
-                                    Media Sniffers
+                                    Market Research
                                     <span>
-                                        SEO / Content Writer / Photographer /
-                                        Graphic Designer
+                                        Research & Analysis
                                     </span>
                                 </h3>
 
@@ -1281,34 +1463,36 @@
                         </div>
 
 
-                        <!-- Search4Franchise -->
+                        <!-- IT -->
+
                         <div class="testi-item">
 
                             <p>
-                                Wrote SEO-focused blogs, guest posts and business
-                                content for UK-based franchise and business audiences.
-                                Improved organic traffic through optimized content
-                                structure, internal linking and backlink strategy while
-                                delivering conversion-focused website copy.
+                                Currently pursuing BBIS after completing an ADP
+                                in IT Management, while developing practical
+                                skills in technology, communication,
+                                teamwork, problem-solving and digital tools.
                             </p>
+
 
                             <div class="testi-thumb">
 
                                 <img
                                     src="img/testi-2.jpg"
-                                    alt="Search4Franchise UK"
+                                    alt="IT Student"
                                 >
 
                                 <h3>
-                                    Search4Franchise UK
+                                    IT Student
                                     <span>
-                                        SEO & Blog Writer
+                                        BBIS / IT Management
                                     </span>
                                 </h3>
 
                             </div>
 
                         </div>
+
 
                     </div>
 
@@ -1319,10 +1503,12 @@
         </div>
 
     </section>
+
     <!-- END EXPERIENCE -->
 
 
     <!-- CONTACT -->
+
     <section
         id="contact"
         class="contact-section padding"
@@ -1353,10 +1539,10 @@
                             class="wow fadeInUp"
                             data-wow-delay="300ms"
                         >
-                            Have an SEO, content marketing, digital marketing
-                            or Meta Ads project? Let's discuss how I can help
-                            improve your online visibility, content performance
-                            and lead generation.
+                            Have a digital marketing, Shopify, Amazon or
+                            market research project? Let's discuss how I can
+                            help with your online business, product management
+                            and digital growth.
                         </p>
 
 
@@ -1365,24 +1551,31 @@
                             data-wow-delay="400ms"
                         >
 
-                            <strong>Email:</strong>
+                            <strong>
+                                Email:
+                            </strong>
 
-                            <a href="mailto:talhanoor82@gmail.com">
-                                talhanoor82@gmail.com
+                            <a href="mailto:malikaliya079@gmail.com">
+                                malikaliya079@gmail.com
                             </a>
 
                             <br>
 
-                            <strong>Phone:</strong>
+                            <strong>
+                                Phone:
+                            </strong>
 
-                            <a href="tel:03051420162">
-                                0305 1420162
+                            <a href="tel:03092975713">
+                                0309 2975713
                             </a>
 
                             <br>
 
-                            <strong>Location:</strong>
-                            Islamabad, Pakistan
+                            <strong>
+                                Location:
+                            </strong>
+
+                            Ghazi Pur, Pakistan, Sialkot
 
                         </p>
 
@@ -1392,45 +1585,14 @@
                             data-wow-delay="500ms"
                         >
 
-                            <strong>LinkedIn:</strong>
+                            <strong>
+                                Languages:
+                            </strong>
 
-                            <a
-                                href="https://linkedin.com/in/talha-amiin"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                linkedin.com/in/talha-amiin
-                            </a>
+                            English & Urdu
 
                         </p>
 
-
-                        <p
-                            class="wow fadeInUp"
-                            data-wow-delay="600ms"
-                        >
-
-                            <strong>Instagram:</strong>
-
-                            <a
-                                href="https://www.instagram.com/mediasniffers/?hl=en"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Media Sniffers
-                            </a>
-
-                            <br>
-
-                            <a
-                                href="https://www.instagram.com/craxyninjaofficial/?hl=en"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Craxy Ninja
-                            </a>
-
-                        </p>
 
                     </div>
 
@@ -1447,6 +1609,7 @@
                             id="ajax_form"
                             class="form-horizontal"
                         >
+
 
                             <div
                                 class="form-group colum-row row wow fadeInUp"
@@ -1531,6 +1694,7 @@
                                 role="alert"
                             ></div>
 
+
                         </form>
 
                     </div>
@@ -1542,10 +1706,12 @@
         </div>
 
     </section>
+
     <!-- END CONTACT -->
 
 
     <!-- GET TO WORK -->
+
     <section class="widget-section padding">
 
         <div class="container">
@@ -1564,18 +1730,18 @@
                 <a
                     class="mb-15 wow fadeInUp"
                     data-wow-delay="200ms"
-                    href="mailto:talhanoor82@gmail.com"
+                    href="mailto:malikaliya079@gmail.com"
                 >
-                    talhanoor82@gmail.com
+                    malikaliya079@gmail.com
                 </a>
 
 
                 <a
-                    href="tel:03051420162"
+                    href="tel:03092975713"
                     class="wow fadeInUp"
                     data-wow-delay="300ms"
                 >
-                    0305 1420162
+                    0309 2975713
                 </a>
 
             </div>
@@ -1583,10 +1749,12 @@
         </div>
 
     </section>
+
     <!-- END GET TO WORK -->
 
 
     <!-- FOOTER -->
+
     <footer class="footer-section">
 
         <div class="container">
@@ -1600,31 +1768,31 @@
 
                         <li>
                             <a
-                                href="https://linkedin.com/in/talha-amiin"
+                                href="https://careerandremotejobs.blogspot.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                LinkedIn
+                                Portfolio
                             </a>
                         </li>
 
-                        <li>
-                            <a
-                                href="https://www.instagram.com/mediasniffers/?hl=en"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Media Sniffers
-                            </a>
-                        </li>
 
                         <li>
                             <a
-                                href="https://www.instagram.com/craxyninjaofficial/?hl=en"
+                                href="https://drive.google.com/drive/folders/1R--DEYPxwwJG563Uy2-NpZyDIPFbrkCe?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Craxy Ninja
+                                Google Drive
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a
+                                href="mailto:malikaliya079@gmail.com"
+                            >
+                                Email
                             </a>
                         </li>
 
@@ -1640,7 +1808,7 @@
                         <p>
                             &copy;
                             <span id="year"></span>
-                            Talha Amin. All Rights Reserved.
+                            Aliya Malik. All Rights Reserved.
                         </p>
 
                     </div>
@@ -1652,10 +1820,12 @@
         </div>
 
     </footer>
+
     <!-- END FOOTER -->
 
 
     <!-- SCROLL TO TOP -->
+
     <a
         data-scroll
         href="#header"
@@ -1666,60 +1836,86 @@
 
 
     <!-- jQuery -->
+
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
 
     <!-- Modernizr -->
+
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
     <!-- Bootstrap -->
+
     <script src="js/vendor/bootstrap.min.js"></script>
 
     <!-- Slicknav -->
+
     <script src="js/vendor/jquery.slicknav.min.js"></script>
 
     <!-- OWL Carousel -->
+
     <script src="js/vendor/owl.carousel.min.js"></script>
 
     <!-- Counterup -->
+
     <script src="js/vendor/jquery.counterup.min.js"></script>
 
     <!-- Waypoints -->
+
     <script src="js/vendor/jquery.waypoints.v2.0.3.min.js"></script>
 
     <!-- Venobox -->
+
     <script src="js/vendor/venobox.min.js"></script>
 
     <!-- Images Loaded -->
+
     <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
 
     <!-- Isotope -->
+
     <script src="js/vendor/jquery.isotope.v3.0.2.js"></script>
 
     <!-- Smooth Scroll -->
+
     <script src="js/vendor/smooth-scroll.min.js"></script>
 
     <!-- WOW -->
+
     <script src="js/vendor/wow.min.js"></script>
 
     <!-- Contact -->
+
     <script src="js/contact.js"></script>
 
     <!-- Main JS -->
+
     <script src="js/main.js"></script>
 
 
     <!-- CURRENT YEAR -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var yearElement = document.getElementById("year");
 
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                var yearElement =
+                    document.getElementById("year");
+
+                if (yearElement) {
+
+                    yearElement.textContent =
+                        new Date().getFullYear();
+
+                }
+
             }
-        });
+        );
+
     </script>
+
 
 </body>
 
 </html>
-
